@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Container from "../../components/Container";
-import Col from "../../components/Col";
-import Row from "../../components/Row";
+import Container from "/Users/ashley/Documents/GitHub/HealthEat/client/src/Components/Container/index.js";
+import Col from "/Users/ashley/Documents/GitHub/HealthEat/client/src/Components/Col/index.js";
+import Row from "/Users/ashley/Documents/GitHub/HealthEat/client/src/Components/Row";
 
 function Signup() {
   const [username, setUsername] = useState();

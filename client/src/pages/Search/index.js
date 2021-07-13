@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
-import Container from "../../components/Container";
-import SearchForm from "../../components/SearchForm";
-import SearchResults from "../../components/SearchResults";
+import Container from "/Users/ashley/Documents/GitHub/HealthEat/client/src/Components/Container/index.js";
+import SearchForm from "/Users/ashley/Documents/GitHub/HealthEat/client/src/Components/SearchForm/index.js";
+import SearchResults from "/Users/ashley/Documents/GitHub/HealthEat/client/src/Components/SearchResults/index.js";
 import useDebounce from "../../utils/debounceHook";
 
 function Search() {
