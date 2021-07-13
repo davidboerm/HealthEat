@@ -1,0 +1,10 @@
+/node_modules/
+/assets/
+/controllers/
+/models/
+/routes/
+package-lock.json
+package.json
+server.js
+/public/
+.env
