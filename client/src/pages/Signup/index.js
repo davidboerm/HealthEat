@@ -1,13 +1,7 @@
 import React, { useState } from "react";
-<<<<<<< Updated upstream
 import Container from "/Users/ashley/Documents/GitHub/HealthEat/client/src/Components/Container/index.js";
 import Col from "/Users/ashley/Documents/GitHub/HealthEat/client/src/Components/Col/index.js";
 import Row from "/Users/ashley/Documents/GitHub/HealthEat/client/src/Components/Row";
-=======
-import Container from "../../components/Container";
-import Col from "../../components/Col";
-import Row from "../../components/Row";
->>>>>>> Stashed changes
 
 function Signup() {
   const [username, setUsername] = useState();
@@ -20,7 +14,7 @@ function Signup() {
     var newUser = this;
     fetch(
       // { this is where the route will }   
-      , {
+      {
         method: POST,
         data: {
           // we can enter more columns if there are some when we create database
