@@ -17,6 +17,19 @@ function Signup() {
     e.preventDefault();
     console.log("username is " + username);
     console.log("password is " + password);
+    var newUser = this;
+    fetch(
+      // { this is where the route will }   
+      , {
+        method: POST,
+        data: {
+          // we can enter more columns if there are some when we create database
+          username: newUser.refs.username,
+          password: newUser.refs.password,
+        }
+      }).then(function(response) {
+        return response.json()
+      })
   };
 
   return (
