@@ -4,6 +4,7 @@ import Container from "/Users/ashley/Documents/GitHub/HealthEat/client/src/Compo
 import SearchForm from "/Users/ashley/Documents/GitHub/HealthEat/client/src/Components/SearchForm/index.js";
 import SearchResults from "/Users/ashley/Documents/GitHub/HealthEat/client/src/Components/SearchResults/index.js";
 import useDebounce from "../../utils/debounceHook";
+import Alert from "react-bootstrap/Alert"
 
 function Search() {
   const [search, setSearch] = useState("Wikipedia");
