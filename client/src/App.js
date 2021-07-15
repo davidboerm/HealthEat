@@ -44,7 +44,14 @@ function App() {
   return (
 
     <div className="App">
-      <h1>Health-Eat</h1>
+    <Router>
+      <div>
+        <Navbar />
+        <Wrapper>
+          <Route exact path="/" component={Search} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/dash" component={Dashboard} />
+          <h1>Health-Eat</h1>
       <form onSubmit={onSubmit} className="search-form">
         {alert !== "" && <Alert alert={alert} />}
         <input
@@ -61,13 +68,6 @@ function App() {
         {recipes !== [] &&
           recipes.map(recipe => <Recipe key={uuidv4()} recipe={recipe} />)}
       </div>
-    <Router>
-      <div>
-        <Navbar />
-        <Wrapper>
-          <Route exact path="/" component={Search} />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/dash" component={Dashboard} />
         </Wrapper>
         <Footer />
       </div>
