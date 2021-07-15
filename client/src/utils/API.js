@@ -5,9 +5,12 @@ import axios from "axios";
 export default {
   searchTerms: function(query) {
     return axios.get(
-      "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
-        query +
-        "&limit=1&format=json&origin=*"
+      "https://api.edamam.com/api/recipes/v2?type=public&q="
+      + query +
+      "&app_id=2fc56cea&app_key=d7e6c9758f994a47e5d7ddd9a9cd5e46" 
     );
   }
 };
+
+// API key
+// d7e6c9758f994a47e5d7ddd9a9cd5e46	

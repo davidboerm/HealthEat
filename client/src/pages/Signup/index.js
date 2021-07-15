@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Container from "../../Components/Container";
 import Col from "../../Components/Col";
 import Row from "../../Components/Row";
+import API from "../../utils/userAuth";
 
 function Signup() {
   const [username, setUsername] = useState();
@@ -11,12 +12,18 @@ function Signup() {
     e.preventDefault();
     console.log("username is " + username);
     console.log("password is " + password);
+    API.userSignup({
+      username: username,
+      password: password
+    }).then(function(response){
+      console.log(response)
+    })
   };
 
   return (
     <div>
       <div className="mt-4">
-        <h2>Welcome to Wikipedia Searcher!</h2>
+        <h2>Welcome to HealthEats!</h2>
       </div>
       <form onSubmit={handleSubmit}>
         <Container className="mt-3 px-5">
@@ -42,7 +49,7 @@ function Signup() {
               />
             </Col>
           </Row>
-          <button className="btn btn-success" type="submit">
+          <button className="btn btn-danger" type="submit">
             Submit
           </button>
         </Container>

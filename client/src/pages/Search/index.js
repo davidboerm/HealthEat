@@ -20,29 +20,33 @@ function Search() {
     }
 
     if (debouncedSearchTerm) {
-      API.searchTerms(search)
-        .then(res => {
-          if (res.data.length === 0) {
-            throw new Error("No results found.");
-          }
-          if (res.data.status === "error") {
-            throw new Error(res.data.message);
-          }
-          setTitle(res.data[1][0]);
-          setUrl(res.data[3][0]);
-        })
-        .catch(err => setError(err));
+
     }
   }, [debouncedSearchTerm]);
 
   const handleInputChange = event => {
     setSearch(event.target.value);
   };
+  const searchRecipe = event => {
+    API.searchTerms(search)
+        .then(res => {
+          console.log(res)
+          // if (res.data.length === 0) {
+          //   throw new Error("No results found.");
+          // }
+          // if (res.data.status === "error") {
+          //   throw new Error(res.data.message);
+          // }
+          // setTitle(res.data[1][0]);
+          // setUrl(res.data[3][0]);
+        })
+        .catch(err => setError(err));
+  };
 
   return (
     <div>
       <Container style={{ minHeight: "100vh" }}>
-        <h1 className="text-center">Search For Anything on Wikipedia</h1>
+        <h1 className="text-center">Plan your meals!</h1>
         <Alert type="danger" style={{ opacity: error ? 1 : 0, marginBottom: 10 }}>
           {error}
         </Alert>
@@ -50,6 +54,8 @@ function Search() {
           handleInputChange={handleInputChange}
           results={search}
         />
+        <button 
+        onClick={searchRecipe}>Search</button>
         <SearchResults title={title} url={url} />
       </Container>
     </div>

@@ -4,13 +4,8 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
     // user credentials
-    name: {
+    username: {
         type: String,
-        required: true,
-    },
-    email: {
-        type: String,
-        unique: true,
         required: true,
     },
     password: {
@@ -27,7 +22,7 @@ const userSchema = new Schema({
                 {
                     title: {
                         type: String,
-                        required: true,
+                        // required: true,
                     },
                     // url for recipe
                     link: {

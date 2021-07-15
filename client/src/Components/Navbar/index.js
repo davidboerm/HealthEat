@@ -7,10 +7,18 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-danger">
       <Link className="navbar-brand" to="/">
-        HealthEat
+        HealthEats
       </Link>
       <div>
         <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link 
+              to="/dash"
+              className={window.location.pathname === "/dash" ? "nav-link active" : "nav-link"}
+            >
+              Dashboard
+            </Link>
+          </li>
           <li className="nav-item">
             <Link
               to="/"
