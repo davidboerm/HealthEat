@@ -16,7 +16,7 @@ function Signup() {
   return (
     <div>
       <div className="mt-4">
-        <h2>Welcome to Wikipedia Searcher!</h2>
+        <h2>Welcome to Health-Eat!</h2>
       </div>
       <form onSubmit={handleSubmit}>
         <Container className="mt-3 px-5">
@@ -43,12 +43,11 @@ function Signup() {
             </Col>
           </Row>
           <button className="btn btn-success" type="submit">
-            Submit
+            Sign In
           </button>
         </Container>
         <Container className="mt-4">
           <h3>Hello {username}!</h3>
-          <p>I probably shouldn't tell you this, but your password is {password}!</p>
         </Container>
       </form>
     </div>
