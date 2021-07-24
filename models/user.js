@@ -21,39 +21,50 @@ const userSchema = new Schema({
     diet: {
         type: String,
     },
-    menu: [
-        {
-            recipe: [
-                {
-                    title: {
-                        type: String,
-                        required: true,
-                    },
-                    // url for recipe
-                    link: {
-                        type: String,
-                        default: "",
-                    },
-                    // save calories, if available
-                    calories: {
-                        type: Number,
-                    },
-                }
-            ],
-            // what dietary restrictions
-            requirement: {
-                type: String,
-            },
-            // what date/day? for this menu
-            date: {
-                type: Date,
-            },
-            // breakfast/lunch/dindin
-            meal: {
-                type: String,
-            }
+    recipeList: [
+    {
+        title: {
+            type:String
+        },
+        link:{
+            type:String
         }
-    ]
+    }
+]
+
+    // menu: [
+    //     {
+    //         recipe: [
+    //             {
+    //                 title: {
+    //                     type: String,
+    //                     required: true,
+    //                 },
+    //                 // url for recipe
+    //                 link: {
+    //                     type: String,
+    //                     default: "",
+    //                 },
+    //                 // save calories, if available
+    //                 calories: {
+    //                     type: Number,
+    //                 },
+    //             }
+    //         ],
+    //         // what dietary restrictions
+    //         requirement: {
+    //             type: String,
+    //         },
+    //         // what date/day? for this menu
+    //         date: {
+    //             type: Date,
+    //         },
+    //         // breakfast/lunch/dindin
+    //         meal: {
+    //             type: String,
+    //         }
+    //     }
+    // ]
 
 })
 

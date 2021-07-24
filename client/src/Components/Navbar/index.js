@@ -30,6 +30,14 @@ function Navbar() {
               Meal Plan
             </Link>
           </li>
+          <li className="nav-item">
+            <Link
+              to="/dashboard"
+              className={window.location.pathname === "/dashboard" ? "nav-link active" : "nav-link"}
+            >
+              My Dashboard
+            </Link>
+          </li>
           </li>
           <li className="nav-item">
             <Link

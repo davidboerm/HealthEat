@@ -11,6 +11,8 @@ import Recipe from "../../Components/Recipe";
 
 function Search(props) {
   const [query, setQuery] = useState("");
+  // 1 is a placeholder until we have authentication
+  const [userid] = useState("1")
   const [recipes, setRecipes] = useState([]);
   const [alert, setAlert] = useState("");
   const APP_ID = "4e9f05eb";
@@ -24,8 +26,9 @@ function Search(props) {
       if (!result.data.more) {
         return setAlert("No food with such name")
       }
-      console.log(result);
+      // console.log(result);
       setRecipes(result.data.hits);
+      console.log(recipes)
       setQuery("");
       setAlert("");
     } else {
@@ -96,7 +99,7 @@ function Search(props) {
       </form>
       <div className="recipes">
         {recipes !== [] &&
-          recipes.map(recipe => <Recipe key={uuidv4()} recipe={recipe} />)}
+          recipes.map(recipe => <Recipe key={uuidv4()} recipe={recipe} userid={userid}/>)}
       </div>
     </div>
   );
